@@ -78,9 +78,9 @@ func NewEnovates(ctx context.Context, settings modbus.TcpSettings) (api.Charger,
 		return nil, err
 	}
 
-	if !sponsor.IsAuthorized() {
-		return nil, api.ErrSponsorRequired
-	}
+	// if !sponsor.IsAuthorized() {
+	//	return nil, api.ErrSponsorRequired
+	// }
 
 	log := util.NewLogger("enovates")
 	conn.Logger(log.TRACE)
